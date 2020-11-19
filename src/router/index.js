@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import Router from 'vue-router'
 // import store from '@/store'
@@ -42,6 +41,9 @@ import Statistics from '@/pages/vehicleManagement/statistics'
 import Truckapply from '@/pages/vehicleManagement/truckapply'
 import TruckApproval from '@/pages/vehicleManagement/truckApproval'
 import Truckrevoke from '@/pages/vehicleManagement/truckrevoke'
+
+// 药剂管理
+import AgentiaList from '@/pages/agentiaManagement/agentiaList'
 
 Vue.use(Router)
 
@@ -89,129 +91,139 @@ const routes = [{
     name: 'SystemManagement',
     component: RouterView,
     children: [{
-      path: 'members',
-      name: 'members',
-      component: Members
-    },
-    {
-      path: 'membersAdd',
-      name: 'membersAdd',
-      component: MembersAdd
-    },
-    {
-      path: 'department',
-      name: 'department',
-      component: Department
-    },
-    {
-      path: 'departmentedit',
-      name: 'departmentedit',
-      component: Departmentedit
-    },
-    {
-      path: 'role',
-      name: 'role',
-      component: Role
-    },
-    {
-      path: 'roleedit',
-      name: 'roleedit',
-      component: Roleedit
-    }
+        path: 'members',
+        name: 'members',
+        component: Members
+      },
+      {
+        path: 'membersAdd',
+        name: 'membersAdd',
+        component: MembersAdd
+      },
+      {
+        path: 'department',
+        name: 'department',
+        component: Department
+      },
+      {
+        path: 'departmentedit',
+        name: 'departmentedit',
+        component: Departmentedit
+      },
+      {
+        path: 'role',
+        name: 'role',
+        component: Role
+      },
+      {
+        path: 'roleedit',
+        name: 'roleedit',
+        component: Roleedit
+      }
     ]
   }, {
     path: '/vehicleManagement',
     name: 'VehicleManagement',
     component: RouterView,
     children: [{
-      path: 'tranStation',
-      name: 'tranStation',
-      component: TranStation
-    },
-    {
-      path: 'drivers',
-      name: 'drivers',
-      component: Drivers
-    },
-    {
-      path: 'shipplace',
-      name: 'shipplace',
-      component: Shipplace
-    },
-    {
-      path: 'timerecord',
-      name: 'timerecord',
-      component: Timerecord
-    },
-    {
-      path: 'trucks',
-      name: 'trucks',
-      component: Trucks
-    },
-    {
-      path: 'signer',
-      name: 'signer',
-      component: Signer
-    },
-    {
-      path: 'shiptab',
-      name: 'shiptab',
-      component: Shiptab
-    },
-    {
-      path: 'statistics',
-      name: 'statistics',
-      component: Statistics
-    },
-    {
-      path: 'truckapply',
-      name: 'truckapply',
-      component: Truckapply
-    },
-    {
-      path: 'truckApproval',
-      name: 'truckApproval',
-      component: TruckApproval
-    },
-    {
-      path: 'truckrevoke',
-      name: 'truckrevoke',
-      component: Truckrevoke
-    }]
+        path: 'tranStation',
+        name: 'tranStation',
+        component: TranStation
+      },
+      {
+        path: 'drivers',
+        name: 'drivers',
+        component: Drivers
+      },
+      {
+        path: 'shipplace',
+        name: 'shipplace',
+        component: Shipplace
+      },
+      {
+        path: 'timerecord',
+        name: 'timerecord',
+        component: Timerecord
+      },
+      {
+        path: 'trucks',
+        name: 'trucks',
+        component: Trucks
+      },
+      {
+        path: 'signer',
+        name: 'signer',
+        component: Signer
+      },
+      {
+        path: 'shiptab',
+        name: 'shiptab',
+        component: Shiptab
+      },
+      {
+        path: 'statistics',
+        name: 'statistics',
+        component: Statistics
+      },
+      {
+        path: 'truckapply',
+        name: 'truckapply',
+        component: Truckapply
+      },
+      {
+        path: 'truckApproval',
+        name: 'truckApproval',
+        component: TruckApproval
+      },
+      {
+        path: 'truckrevoke',
+        name: 'truckrevoke',
+        component: Truckrevoke
+      }
+    ]
   }, {
     path: '/faultUpload',
     name: 'FaultUpload',
     component: RouterView,
     children: [{
-      path: 'questionType',
-      name: 'questionType',
-      component: QuestionType
-    }, {
-      path: 'questionTypeedit',
-      name: 'questionTypeedit',
-      component: QuestionTypeedit
-    },
-    {
-      path: 'centralStation',
-      name: 'centralStation',
-      component: CentralStation
-    },
-    {
-      path: 'statisticschart',
-      name: 'statisticschart',
-      component: Statisticschart
-    },
-    {
-      path: 'location',
-      name: 'location',
-      component: Location
-    },
-    {
-      path: 'degree',
-      name: 'degree',
-      component: Degree
-    }
+        path: 'questionType',
+        name: 'questionType',
+        component: QuestionType
+      }, {
+        path: 'questionTypeedit',
+        name: 'questionTypeedit',
+        component: QuestionTypeedit
+      },
+      {
+        path: 'centralStation',
+        name: 'centralStation',
+        component: CentralStation
+      },
+      {
+        path: 'statisticschart',
+        name: 'statisticschart',
+        component: Statisticschart
+      },
+      {
+        path: 'location',
+        name: 'location',
+        component: Location
+      },
+      {
+        path: 'degree',
+        name: 'degree',
+        component: Degree
+      }
     ]
+  }, {
+    path: '/agentiaManagement',
+    name: '/AgentiaManagement',
+    component: RouterView,
+    children: [{
+      path: 'agentiaList',
+      name: 'agentiaList',
+      component: AgentiaList
+    }, ]
   }]
 }]
 
